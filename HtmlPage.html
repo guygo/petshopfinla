@@ -1,0 +1,126 @@
+﻿<html lang="en" class="ui-mobile">
+<script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script>
+<head>
+    <base href="http://dev.jtsage.com/jQM-DateBox/">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <title>jQueryMobile - DateBox</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.min.css">
+    <link type="text/css" href="css/demos.css" rel="stylesheet">
+    <!-- NOTE: Script load order is significant! -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/external/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="http://dev.jtsage.com/jQM-DateBox/js/doc.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.core.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.mode.calbox.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.mode.datebox.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.mode.flipbox.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.mode.slidebox.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.mode.customflip.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/i18n/jqm-datebox.lang.utf8.js"></script>
+    <script type="text/javascript">
+    jQuery.extend(jQuery.mobile,
+    {
+      ajaxEnabled: false
+    });
+    </script>
+</head>
+<body class="ui-mobile-viewport ui-overlay-a">
+    <div data-role="page" id="main" data-url="main" tabindex="0" class="ui-page ui-page-theme-a ui-page-header-fixed ui-page-footer-fixed ui-page-active" style="padding-top: 44px; padding-bottom: 44px;">
+        <div data-role="header" data-position="fixed" role="banner" class="ui-header ui-bar-inherit ui-header-fixed slidedown">
+            <h1 class="ui-title" role="heading" aria-level="1">jQueryMobile - DateBox</h1>
+            <a href="javascript:$('#langpicker').datebox('open')" class="ui-btn-left ui-btn ui-shadow ui-corner-all" data-role="button" role="button">i18n</a>
+        </div>
+        <div class="ui-content" role="main">
+            <div class="content-secondary">
+                <div id="jqm-homeheader">
+                    <h1 id="jqm-logo"><img src="img/jquery-logo-db.png" alt="jQuery Mobile Framework :: DateBox"></h1>
+                    <p>A Date and Time Picker plugin for jQueryMobile 1.4.5</p>
+                </div>
+                <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                    <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit ui-first-child">Documentation</li>
+                    <li>
+                        <a href="doc/" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Main Documentation</a>
+                    </li>
+                    <li>
+                        <a href="api/" class="ui-btn ui-btn-icon-right ui-icon-carat-r">API Documentation</a>
+                    </li>
+                    <li data-role="list-divider" role="heading" class="ui-li-divider ui-bar-inherit">Support</li>
+                    <li>
+                        <a href="theme/" rel="external" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Theme Builder</a>
+                    </li>
+                    <li>
+                        <a href="builder/" rel="external" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Download Builder</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jtsage/jquery-mobile-datebox" class="ui-btn ui-btn-icon-right ui-icon-carat-r">GitHub Source</a>
+                    </li>
+                    <li>
+                        <a href="http://dev.jtsage.com/forums/" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Support Forums</a>
+                    </li>
+                    <li>
+                        <a href="http://crowdin.net/project/jquery-mobile-datebox" class="ui-btn ui-btn-icon-right ui-icon-carat-r">i18n Project</a>
+                    </li>
+                    <li>
+                        <a href="mailto:jtsage+datebox@gmail.com" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Contact</a>
+                    </li>
+                    <li class="ui-last-child">
+                        <a href="http://jquerymobile.com/" class="ui-btn ui-btn-icon-right ui-icon-carat-r">jQueryMobile Homepage</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/content-primary-->
+            <div class="content-primary">
+                <div class="ui-body ui-body-b ui-corner-all">
+                    <h3>Depreciation Warning!</h3>
+                    <p>There is a new version of DateBox!  It's faster, more streamlined, easier to install, and works with more than just jQM!  Go to the <a href="&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;/DateBox/" class="ui-link">DateBox</a> Docs!</p>
+                </div>
+                <p class="aintro">DateBox is a jQueryMobile plugin that aims to make user interaction with dates and times simple and intuitive. It is a colloborative work, with a full range of features allowing easy implementation, and painless extensibility.</p>
+                <h2>General Look and Feel</h2>
+                <div class="ui-field-contain">
+                    <label for="mode1">CalBox</label>
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input name="mode1" id="mode1" type="text" data-role="datebox" data-options="{&quot;mode&quot;:&quot;calbox&quot;}" readonly="readonly"><a href="#" class="ui-input-clear ui-btn ui-icon-calendar ui-btn-icon-notext ui-corner-all" title="Open Date Picker">Open Date Picker</a></div>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="mode2">DateBox</label>
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input name="mode2" id="mode2" type="text" data-role="datebox" data-options="{&quot;mode&quot;:&quot;datebox&quot;}" readonly="readonly"><a href="#" class="ui-input-clear ui-btn ui-icon-calendar ui-btn-icon-notext ui-corner-all" title="Open Date Picker">Open Date Picker</a></div>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="mode9">TimeBox</label>
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input name="mode9" id="mode9" type="text" data-role="datebox" data-options="{&quot;mode&quot;:&quot;timebox&quot;}" readonly="readonly"><a href="#" class="ui-input-clear ui-btn ui-icon-clock ui-btn-icon-notext ui-corner-all" title="Open Date Picker">Open Date Picker</a></div>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="mode5">DurationBox</label>
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input name="mode5" id="mode5" type="text" data-role="datebox" data-options="{&quot;mode&quot;:&quot;durationbox&quot;}" readonly="readonly"><a href="#" class="ui-input-clear ui-btn ui-icon-clock ui-btn-icon-notext ui-corner-all" title="Open Date Picker">Open Date Picker</a></div>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="mode3">FlipBox</label>
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input name="mode3" id="mode3" type="text" data-role="datebox" data-options="{&quot;mode&quot;:&quot;flipbox&quot;}" readonly="readonly"><a href="#" class="ui-input-clear ui-btn ui-icon-calendar ui-btn-icon-notext ui-corner-all" title="Open Date Picker">Open Date Picker</a></div>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="mode7">TimeFlipBox</label>
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input name="mode7" id="mode7" type="text" data-role="datebox" data-options="{&quot;mode&quot;:&quot;timeflipbox&quot;}" readonly="readonly"><a href="#" class="ui-input-clear ui-btn ui-icon-clock ui-btn-icon-notext ui-corner-all" title="Open Date Picker">Open Date Picker</a></div>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="mode6">DurationFlipBox</label>
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input name="mode6" id="mode6" type="text" data-role="datebox" data-options="{&quot;mode&quot;:&quot;durationflipbox&quot;}" readonly="readonly"><a href="#" class="ui-input-clear ui-btn ui-icon-clock ui-btn-icon-notext ui-corner-all" title="Open Date Picker">Open Date Picker</a></div>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="mode4">SlideBox</label>
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input name="mode4" id="mode4" type="text" data-role="datebox" data-options="{&quot;mode&quot;:&quot;slidebox&quot;}" readonly="readonly"><a href="#" class="ui-input-clear ui-btn ui-icon-calendar ui-btn-icon-notext ui-corner-all" title="Open Date Picker">Open Date Picker</a></div>
+                </div>
+                <div style="display:none">
+                    <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input name="langpicker" type="text" data-role="datebox" data-datebox-close-callback="changeLang" data-datebox-custom-data="langs" data-datebox-custom-head="Language" data-datebox-popup-position="window" data-datebox-override-custom-set="Choose" data-datebox-mode="customflip" id="langpicker" readonly="readonly"><a href="#" class="ui-input-clear ui-btn ui-icon-calendar ui-btn-icon-notext ui-corner-all" title="Open Date Picker">Open Date Picker</a></div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" role="contentinfo" class="ui-footer ui-bar-inherit ui-footer-fixed slideup">
+            <h1 class="ui-title" role="heading" aria-level="1">a project by JTSage</h1>
+        </div>
+    </div>
+
+    <div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon-loading"></span><h1>loading</h1></div><div class="ui-popup-screen ui-overlay-b ui-screen-hidden"></div><div class="ui-popup-container fade ui-popup-hidden ui-popup-truncate"><div class="ui-datebox-container ui-overlay-shadow ui-corner-all fade ui-body-a ui-popup ui-body-inherit" style="z-index: 1100;"><a href="#" class="ui-btn-left ui-link ui-btn ui-btn-a ui-icon-delete ui-btn-icon-notext ui-shadow ui-corner-all">Close</a><div class="ui-header ui-bar-a"><h1 class="ui-title">CalBox</h1></div><span><div class="ui-datebox-gridheader"><div class="ui-datebox-gridminus"><a href="#" class="ui-btn-inline ui-link ui-btn ui-btn-a ui-icon-minus ui-btn-icon-notext ui-shadow ui-corner-all">Previous Month</a></div><div class="ui-datebox-gridplus"><a href="#" class="ui-btn-inline ui-link ui-btn ui-btn-a ui-icon-plus ui-btn-icon-notext ui-shadow ui-corner-all">Next Month</a></div><div class="ui-datebox-gridlabel"><h4>August 2016</h4></div></div><div class="ui-datebox-grid"><div class="ui-datebox-gridrow"><div class="ui-datebox-griddate ui-datebox-griddate-label">Su</div><div class="ui-datebox-griddate ui-datebox-griddate-label">Mo</div><div class="ui-datebox-griddate ui-datebox-griddate-label">Tu</div><div class="ui-datebox-griddate ui-datebox-griddate-label">We</div><div class="ui-datebox-griddate ui-datebox-griddate-label">Th</div><div class="ui-datebox-griddate ui-datebox-griddate-label">Fr</div><div class="ui-datebox-griddate ui-datebox-griddate-label">Sa</div></div><div class="ui-datebox-gridrow"><div class="ui-datebox-griddate ui-corner-all ui-btn ui-datebox-griddate-empty" style="cursor: pointer;">31</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">1</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">2</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">3</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">4</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">5</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">6</div></div><div class="ui-datebox-gridrow"><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">7</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">8</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">9</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">10</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">11</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">12</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">13</div></div><div class="ui-datebox-gridrow"><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">14</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-b">15</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">16</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">17</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">18</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">19</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">20</div></div><div class="ui-datebox-gridrow"><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">21</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">22</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">23</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">24</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">25</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">26</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">27</div></div><div class="ui-datebox-gridrow ui-datebox-gridrow-last"><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">28</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">29</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">30</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-btn-a">31</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-datebox-griddate-empty" style="cursor: pointer;">1</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-datebox-griddate-empty" style="cursor: pointer;">2</div><div class="ui-datebox-griddate ui-corner-all ui-btn ui-datebox-griddate-empty" style="cursor: pointer;">3</div></div></div></span></div></div>
+</body>
+</html>

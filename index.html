@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.min.css">
+
+    <link href="styles/style.css" rel="stylesheet" />
+    <!-- NOTE: Script load order is significant! -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/external/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="http://dev.jtsage.com/jQM-DateBox/js/doc.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.core.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.mode.calbox.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.mode.datebox.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.mode.flipbox.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.mode.slidebox.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.mode.customflip.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jtsage.com/datebox/i18n/jqm-datebox.lang.utf8.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript">
+    jQuery.extend(jQuery.mobile,
+    {
+      ajaxEnabled: false
+    });
+  
+
+    // Wait for device API libraries to load
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available        
+    function onDeviceReady() {
+        //alert("PG - devicereadye");
+        $('#deviceProperties').html('Device Model: ' + device.model + '<br />' +
+                        'Device Cordova: ' + device.cordova + '<br />' +
+                        'Device Platform: ' + device.platform + '<br />' +
+                        'Device UUID: ' + device.uuid + '<br />' +
+                        'Device Version: ' + device.version + '<br />');
+    }
+
+    
+
+    </script>
+    
+   
+    
+   
+    <title>pages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="styles/MyStSh.css" rel="stylesheet" type="text/css" />
+   
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDMvuJFvCghEamrQNgQ68q3f6mYFNRpA1Q&libraries=geometry'></script>
+    <script type="text/javascript">
+        $(document).on('mobileinit', function () {
+            $.mobile.defaultPageTransition = "slide";
+        });
+    </script>
+    <style>
+        #gmap_canvas img {
+            max-width: none !important;
+            background: none !important;
+        }
+
+     #content {
+    padding: 0;
+    position : absolute !important; 
+    top : 40px !important;  
+    right : 0; 
+    bottom : 40px !important;  
+    left : 0 !important;     
+}
+
+        .gm-style-iw {
+            color: black;
+         
+        }
+</style>
+    <script src="scripts/map.js"></script>
+    <script src="scripts/shops.js"></script>
+    <script src="scripts/orders.js"></script>
+    <script src="scripts/orderitems.js"></script>
+    <script src="scripts/items.js"></script>
+</head>
+<body>
+    <!--the Welcome page-->
+    <div data-role="page" id="WelcomePage" data-theme="a">
+
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist " data-icon="home">home</a></li>
+                    <li><a href="#ShopPage" data-icon="bars" >shops</a></li>
+                    <li><a href="#MapPage" data-icon="location">Map page</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" class="ui-content" style="text-align:center;">
+            
+                <h3>Welcome to pet shops mobile.</h3>
+                 <p>here you can search for the closet shop to your location,<br>look for intersting items and much more  </p>
+    
+        </div>
+        
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h5>pets Shops  &nbsp &copy; &nbsp  group11</h5>
+        </div>
+    </div>
+
+
+    <!--the Shop page-->
+    <div data-role="page" id="ShopPage" data-theme="a">
+
+
+
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home">home</a></li>
+                    <li><a href="#ShopPage" data-icon="bars">shops</a></li>
+
+                    <li><a href="#MapPage" data-icon="location">Map page</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+            
+           
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h5>pets Shops  &nbsp &copy; &nbsp  group11</h5>
+        </div>
+    </div>
+
+    <!--the Map page-->
+    <div data-role="page" id="MapPage" data-theme="a">
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home">home</a></li>
+                    <li><a href="#ShopPage" data-icon="bars" >shops</a></li>
+
+                    <li><a href="#MapPage" data-icon="location">Map page</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+            <div style='overflow:hidden;height:440px;width:100%;'>
+                <div id='gmap_canvas' style='height:100%;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">	embed google maps</a></small></div>
+                
+            </div>
+            <div style="text-align:center">
+                     
+                    <label class="ui-btn ui-corner-all ui-shadow">Closet Store:     <span id="message"></span><br/><span id="address"></span></label>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h5>pets shops &nbsp &copy; &nbsp group11</h5>
+        </div>
+    </div>
+
+
+
+    <!--the order page-->
+    <div data-role="page" id="OrderPage" data-theme="a">
+
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home">home</a></li>
+                    <li><a href="#ShopPage" data-icon="bars">shops</a></li>
+
+                    <li><a href="#MapPage" data-icon="location">Map page</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+            <h1>make appointment for hair cut for your pet</h1>
+            <div class="ui-field-contain">
+                <label for="fullname">Full name:</label>
+                <input type="text" name="fullname" id="fullname">
+                <label for="date">Date of Appointment:</label>
+                <input type="text" data-role="datebox"  name="date"  id="date" data-options='{"mode":"calbox" ,"afterToday":true,"maxDays":60,"blackDays":[6]}'>
+                
+                <label for="time">and hour:</label>
+                <input type="text" data-role="datebox" name="time" id="time" data-options='{"mode":"timebox","timeFormat":24,"maxHour":22,"minHour":8,"useInline":false,"useInlineAlign":"center","minuteStep": 15}'>
+                <label for="phone">phone:</label>
+                <input type="number" name="phone" id="phone" placeholder="Your phone..">
+            </div>
+            <input type="button" data-inline="true" id="orderbtn" value="make your appoitnment">
+            <a href="#ItemsPage" data-inline="true" class='ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-info ui-btn-icon-left'>our products</a>
+        </div>
+
+
+
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h5>pets  Shops &nbsp &copy; &nbsp  group11</h5>
+        </div>
+    </div>
+   
+    <!--the dynamicorder page-->
+    <div data-role="page" id="DynamicOrderPage" data-theme="a">
+
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home">home</a></li>
+                    <li><a href="#ShopPage" data-icon="bars">shops</a></li>
+
+                    <li><a href="#MapPage" data-icon="location">Map page</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+            <h1>make appointment for hair cut for your pet</h1>
+            <div class="ui-field-contain">
+                <p>you may want to make an appointment in these hours</p>
+                <label for='select-native-1'>time:</label>
+                <select name='select-native-1' id='myselect'></select>
+            </div>
+           <a href="#ShopPage" id="fixedhour" onclick="addagain()" value="make your appoitnment" class="ui-btn">add your appoitnment</a>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h5>pets  Shops &nbsp &copy; &nbsp  group11</h5>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--the items page-->
+    <div data-role="page" id="ItemsPage" data-theme="a">
+
+        
+
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home">home</a></li>
+                    <li><a href="#ShopPage" data-icon="bars" >shops</a></li>
+
+                    <li><a href="#MapPage" data-icon="location">Map page</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+
+            
+            <ul id="itemlist" data-role="listview"></ul>
+
+
+
+        </div>
+
+
+
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h5>pets  Shops &nbsp &copy; &nbsp  group11</h5>
+        </div>
+    </div>
+
+
+
+
+    <!--the OrderItemPage -->
+    <div data-role="page" id="OrderItemPage" data-theme="a">
+
+
+
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home">home</a></li>
+                    <li><a href="#ShopPage" data-icon="bars">shops</a></li>
+
+                    <li><a href="#MapPage"data-icon="location">Map page</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+
+
+
+            <div class="ui-field-contain">
+                <label for="email">email:</label>
+                <input type="email" name="email" id="email" placeholder="name@email..">
+
+                <label for="uphone">phone:</label>
+                <input type="number" name="uphone" id="uphone">
+            </div>
+
+
+            <a href="#" id="placeorder" class="ui-btn">order</a>
+        </div>
+
+
+
+        <div data-role="footer" data-position="fixed" data-theme="a">
+            <h5>pets  Shops &nbsp &copy; &nbsp  group11</h5>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
