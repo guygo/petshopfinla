@@ -160,7 +160,7 @@ $(document).on("pageshow", "#MapPage", function () {
                     '<div class="iw-title">' + shop.Name + '</div>' +
                     '<div class="iw-content">' +
                       '<div class="iw-subTitle">Welcome!!!!</div>' +
-                      '<img src="data:image/png;base64, ' + shop.imgurl + '"  height="70" width="60">' +
+                      '<img src="' + shop.imgurl + '"  height="70" width="60">' +
 
                       '<div><p>' + shop.Adress + '</p></div>' +
                       '<div class="iw-subTitle">Contacts</div>' +

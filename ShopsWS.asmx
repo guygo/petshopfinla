@@ -34,9 +34,9 @@ public class ShopsWS : System.Web.Services.WebService
         string conStr = WebConfigurationManager.ConnectionStrings["conString"].ConnectionString;
         SqlConnection con = new SqlConnection(conStr);
         con.Open();
-        SqlCommand com = new SqlCommand("SELECT * FROM Shops ", con);
+        SqlCommand com = new SqlCommand("SELECT * FROM shops ", con);
 
-        SqlCommand comm = new SqlCommand("SELECT COUNT(*) FROM Shops", con);
+        SqlCommand comm = new SqlCommand("SELECT COUNT(*) FROM shops", con);
         Int32 count = (Int32)comm.ExecuteScalar();
 
         adrress = new string[count];
@@ -47,7 +47,7 @@ public class ShopsWS : System.Web.Services.WebService
         while (reader.Read())
         {
 
-            adrress[i] = reader["Adress"].ToString();
+            adrress[i] = reader["Address"].ToString();
             i++;
         }
         con.Close();
@@ -63,7 +63,7 @@ public class ShopsWS : System.Web.Services.WebService
         string conStr = WebConfigurationManager.ConnectionStrings["conString"].ConnectionString;
         SqlConnection con = new SqlConnection(conStr);
         con.Open();
-        SqlCommand com = new SqlCommand("SELECT * FROM Shops ", con);
+        SqlCommand com = new SqlCommand("SELECT * FROM shops ", con);
 
         SqlDataReader reader = com.ExecuteReader();
 
@@ -74,10 +74,10 @@ public class ShopsWS : System.Web.Services.WebService
 
             // Convert Image to byte[]
 
-            byte[] imageBytes = ((byte[])reader["picture"]);
+           
 
             // Convert byte[] to Base64 String
-            string  base64String=  Convert.ToBase64String(imageBytes);
+            
             
          
 
@@ -85,9 +85,9 @@ public class ShopsWS : System.Web.Services.WebService
             items.Add(new Shop {
                 Name = reader["ShopName"].ToString(),
                 Phone = reader["PhoneNumber"].ToString(),
-                Adress = reader["Adress"].ToString(),
+                Adress = reader["Address"].ToString(),
                 Id = reader["id"].ToString(),
-                imgurl=base64String
+                imgurl=reader["picture"].ToString()
             });
 
         }

@@ -51,7 +51,7 @@ function wireEventsShopPage() {
 
 function getshops(callback) {
   
-    WebServiceURL = "http://proj.ruppin.ac.il/cegroup11/prod/" + "ShopsWS.asmx";
+    WebServiceURL =  "http://proj.ruppin.ac.il/cegroup11/prod/"+"ShopsWS.asmx";
     $.support.cors = true;
     $.ajax({
         url: WebServiceURL + "/GetShops",
