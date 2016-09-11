@@ -3,9 +3,13 @@
 <head>
    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.min.css">
+    
 
+    <link href="styles/themes/pettheme.min.css" rel="stylesheet" />
+    <link href="styles/themes/jquery.mobile.icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="http://cdn.jtsage.com/datebox/1.4.5/jqm-datebox-1.4.5.min.css">
+    <link href="styles/style.css" rel="stylesheet" />
     <link href="styles/style.css" rel="stylesheet" />
     <!-- NOTE: Script load order is significant! -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.js"></script>
@@ -52,7 +56,7 @@
     <link href="styles/MyStSh.css" rel="stylesheet" type="text/css" />
    
     <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDMvuJFvCghEamrQNgQ68q3f6mYFNRpA1Q&libraries=geometry'></script>
-    <script type="text/javascript">
+    <script  type="text/javascript">
         $(document).on('mobileinit', function () {
             $.mobile.defaultPageTransition = "slide";
         });
@@ -64,6 +68,7 @@
         }
 
      #content {
+         
     padding: 0;
     position : absolute !important; 
     top : 40px !important;  
@@ -118,8 +123,8 @@
         <div data-role="header" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home">home</a></li>
-                    <li><a href="#ShopPage" data-icon="bars">shops</a></li>
+                    <li><a href="#WelcomePage"  data-icon="home">home</a></li>
+                    <li><a href="#ShopPage" class="ui-btn-active ui-state-persist" data-icon="bars">shops</a></li>
 
                     <li><a href="#MapPage" data-icon="location">Map page</a></li>
 
@@ -127,7 +132,7 @@
             </div>
         </div>
         <div data-role="content">
-            
+           
            
         </div>
         <div data-role="footer" data-position="fixed" data-theme="a">
@@ -137,20 +142,20 @@
 
     <!--the Map page-->
     <div data-role="page" id="MapPage" data-theme="a" >
-        <div data-role="header" data-position="fixed">
+        <div data-role="header" >
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home">home</a></li>
+                    <li><a href="#WelcomePage"  data-icon="home">home</a></li>
                     <li><a href="#ShopPage" data-icon="bars" >shops</a></li>
 
-                    <li><a href="#MapPage" data-icon="location">Map page</a></li>
+                    <li><a href="#MapPage" class="ui-btn-active ui-state-persist" data-icon="location">Map page</a></li>
 
                 </ul>
             </div>
         </div>
         <div data-role="content">
             <div style='overflow:hidden;height:440px;width:100%;'>
-                <div id='gmap_canvas' style='height:100%;width:80%;'></div><div><small><a href="http://embedgooglemaps.com">	embed google maps</a></small></div>
+                <div id='gmap_canvas' style='height:100%;width:90%;'></div><div><small><a href="http://embedgooglemaps.com">	embed google maps</a></small></div>
                 
             </div>
             <div style="text-align:center">
@@ -172,8 +177,8 @@
         <div data-role="header" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home">home</a></li>
-                    <li><a href="#ShopPage" data-icon="bars">shops</a></li>
+                    <li><a href="#WelcomePage"  data-icon="home">home</a></li>
+                    <li><a href="#ShopPage" class="ui-btn-active ui-state-persist" data-icon="bars">shops</a></li>
 
                     <li><a href="#MapPage" data-icon="location">Map page</a></li>
 
@@ -210,8 +215,8 @@
         <div data-role="header" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home">home</a></li>
-                    <li><a href="#ShopPage" data-icon="bars">shops</a></li>
+                    <li><a href="#WelcomePage"  data-icon="home">home</a></li>
+                    <li><a href="#ShopPage" class="ui-btn-active ui-state-persist" data-icon="bars">shops</a></li>
 
                     <li><a href="#MapPage" data-icon="location">Map page</a></li>
 
@@ -245,8 +250,8 @@
         <div data-role="header" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home">home</a></li>
-                    <li><a href="#ShopPage" data-icon="bars" >shops</a></li>
+                    <li><a href="#WelcomePage"  data-icon="home">home</a></li>
+                    <li><a href="#ShopPage" class="ui-btn-active ui-state-persist" data-icon="bars" >shops</a></li>
 
                     <li><a href="#MapPage" data-icon="location">Map page</a></li>
 
@@ -280,8 +285,8 @@
         <div data-role="header" data-position="fixed">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home">home</a></li>
-                    <li><a href="#ShopPage" data-icon="bars">shops</a></li>
+                    <li><a href="#WelcomePage"  data-icon="home">home</a></li>
+                    <li><a href="#ShopPage" class="ui-btn-active ui-state-persist" data-icon="bars">shops</a></li>
 
                     <li><a href="#MapPage"data-icon="location">Map page</a></li>
 
